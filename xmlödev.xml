@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<students>
+	<student>
+		<name>Yavuz</name>
+		<surname>Kuru</surname>
+		<age units="feet">24</age>
+		<main_image file="girls.jpg" w="300" h="400" />
+		<artBodyImg><img src="girls.jpg" /></artBodyImg>
+	</student>
+</students>
