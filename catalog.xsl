@@ -4,7 +4,18 @@
 	<html>
 	  <body>
 
-		<xsl:value-of select="catalog/product"/>
+		<table border="2" align="center">
+		    <tr>
+			<th>Item number</th>
+			<th>Price</th>
+			<th>Size</th>
+		    </tr>
+		    <tr>
+			<td><xsl:value-of select="catalog/product/catalog_item/item_number"/></td>
+			<td></td>
+			<td></td>
+		    </tr>
+		</table>
 
 		
 	  </body>
