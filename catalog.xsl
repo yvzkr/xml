@@ -1,5 +1,6 @@
 <?xml version="1.0"?>
 <xsl:stylesheet xmlns:xsl="http://www.w3.org/1999/XSL/Transform" version="1.0">
+<xsl:output method="html"/>
 	<xsl:template match="/">
 	<html>
 	  <body>
@@ -10,11 +11,21 @@
 			<th>Price</th>
 			<th>Size</th>
 		    </tr>
+		  <xsl:for-each select="catalog/product/catalog_item"> 
 		    <tr>
-			<td><xsl:value-of select="catalog/product/catalog_item/item_number"/></td>
-			<td></td>
-			<td></td>
+			
+			<td><xsl:value-of select="item_number"/></td>
+			<td><xsl:value-of select="price"/></td>
+			<td><xsl:for-each select="size">
+				<xsl:value-of select="@description"/> :
+				 <xsl:for-each select="color_swatch">
+					<xsl:value-of select="."/> ,
+				 </xsl:for-each><br/>				
+				
+			</xsl:for-each>
+			</td>
 		    </tr>
+		  </xsl:for-each>
 		</table>
 
 		
