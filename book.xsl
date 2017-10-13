@@ -11,7 +11,8 @@
       <th style="text-align:left">Year</th>
     </tr>
     <xsl:for-each select="catalog/cd[@code='en']">
-     <tr>
+     <xsl:sort select="artist"/>
+      <tr>
       	<td><xsl:value-of select="title"/></td>
 	<xsl:choose>     
 	<xsl:when test="price>10"> 	
@@ -22,7 +23,7 @@
 	</xsl:otherwise>
 	</xsl:choose>
 		<td><xsl:value-of select="year"/></td>
-     </tr>
+      </tr>
     </xsl:for-each>
   </table>
 </body>
