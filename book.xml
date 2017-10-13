@@ -2,7 +2,7 @@
 <?xml-stylesheet type="text/xsl" href="book.xsl"?>
 <catalog>
   <cd>
-    <title>Empire Burlesque</title>
+    <title code="en">Empire Burlesque</title>
     <artist>Bob Dylan</artist>
     <country>USA</country>
     <company>Columbia</company>
@@ -10,7 +10,7 @@
     <year>1985</year>
   </cd>
   <cd>
-    <title>Hide your heart</title>
+    <title code="en">Hide your heart</title>
     <artist>Bonnie Tyler</artist>
     <country>UK</country>
     <company>CBS Records</company>
@@ -18,7 +18,7 @@
     <year>1988</year>
   </cd>
   <cd>
-    <title>Greatest Hits</title>
+    <title code="en">Greatest Hits</title>
     <artist>Dolly Parton</artist>
     <country>USA</country>
     <company>RCA</company>
@@ -208,6 +208,14 @@
     <company>EMI</company>
     <price>8.20</price>
     <year>1987</year>
+  </cd>
+  <cd>
+    <title code="tr">Tehlikeli Oyunlar</title>
+    <artist>Oğuz Atay</artist>
+    <country>Türkiye</country>
+    <company>İletişim</company>
+    <price>25,13</price>
+    <year>1970</year>
   </cd>
 </catalog>
 
