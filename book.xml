@@ -41,7 +41,7 @@
     <price>9.90</price>
     <year>1997</year>
   </cd>
-  <cd>
+  <cd code="en">
     <title>One night only</title>
     <artist>Bee Gees</artist>
     <country>UK</country>
@@ -49,7 +49,7 @@
     <price>10.90</price>
     <year>1998</year>
   </cd>
-  <cd>
+  <cd code="en">
     <title>Sylvias Mother</title>
     <artist>Dr.Hook</artist>
     <country>UK</country>
@@ -57,7 +57,7 @@
     <price>8.10</price>
     <year>1973</year>
   </cd>
-  <cd>
+  <cd code="en">
     <title>Maggie May</title>
     <artist>Rod Stewart</artist>
     <country>UK</country>
@@ -73,7 +73,7 @@
     <price>10.80</price>
     <year>1996</year>
   </cd>
-  <cd>
+  <cd code="en">
     <title>When a man loves a woman</title>
     <artist>Percy Sledge</artist>
     <country>USA</country>
@@ -89,7 +89,7 @@
     <price>10.90</price>
     <year>1995</year>
   </cd>
-  <cd>
+  <cd code="en">
     <title>1999 Grammy Nominees</title>
     <artist>Many</artist>
     <country>USA</country>
@@ -97,7 +97,7 @@
     <price>10.20</price>
     <year>1999</year>
   </cd>
-  <cd>
+  <cd code="en">
     <title>For the good times</title>
     <artist>Kenny Rogers</artist>
     <country>UK</country>
