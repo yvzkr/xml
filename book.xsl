@@ -8,16 +8,21 @@
     <tr bgcolor="#9acd32">
       <th style="text-align:left">Title</th>
       <th style="text-align:left">Artist</th>
-      <th style="text-align:left">Price</th>
+      <th style="text-align:left">Year</th>
     </tr>
     <xsl:for-each select="catalog/cd[@code='en']">
-     <xsl:if test="price>10">
-    	<tr>
+     <tr>
       	<td><xsl:value-of select="title"/></td>
-      	<td><xsl:value-of select="artist"/></td>
-	<td><xsl:value-of select="price"/></td>
-    	</tr>
-      </xsl:if>
+	<xsl:choose>     
+	<xsl:when test="price>10"> 	
+		<td bgcolor="#ff00ff"><xsl:value-of select="artist"/></td>
+	</xsl:when>
+	<xsl:otherwise>
+		<td><xsl:value-of select="artist"/></td>
+	</xsl:otherwise>
+	</xsl:choose>
+		<td><xsl:value-of select="year"/></td>
+     </tr>
     </xsl:for-each>
   </table>
 </body>
