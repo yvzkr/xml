@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <?xml-stylesheet type="text/xsl" href="book.xsl"?>
 <catalog>
-  <cd>
-    <title code="en">Empire Burlesque</title>
+  <cd code="en">
+    <title>Empire Burlesque</title>
     <artist>Bob Dylan</artist>
     <country>USA</country>
     <company>Columbia</company>
     <price>10.90</price>
     <year>1985</year>
   </cd>
-  <cd>
-    <title code="en">Hide your heart</title>
+  <cd code="en">
+    <title>Hide your heart</title>
     <artist>Bonnie Tyler</artist>
     <country>UK</country>
     <company>CBS Records</company>
@@ -18,7 +18,7 @@
     <year>1988</year>
   </cd>
   <cd>
-    <title code="en">Greatest Hits</title>
+    <title>Greatest Hits</title>
     <artist>Dolly Parton</artist>
     <country>USA</country>
     <company>RCA</company>
@@ -33,7 +33,7 @@
     <price>10.20</price>
     <year>1990</year>
   </cd>
-  <cd>
+  <cd code="en">
     <title>Eros</title>
     <artist>Eros Ramazzotti</artist>
     <country>EU</country>
@@ -65,7 +65,7 @@
     <price>8.50</price>
     <year>1990</year>
   </cd>
-  <cd>
+  <cd code="gr">
     <title>Romanza</title>
     <artist>Andrea Bocelli</artist>
     <country>EU</country>
@@ -81,7 +81,7 @@
     <price>8.70</price>
     <year>1987</year>
   </cd>
-  <cd>
+  <cd code="gr">
     <title>Black angel</title>
     <artist>Savage Rose</artist>
     <country>EU</country>
@@ -209,8 +209,8 @@
     <price>8.20</price>
     <year>1987</year>
   </cd>
-  <cd>
-    <title code="tr">Tehlikeli Oyunlar</title>
+  <cd code="tr">
+    <title>Tehlikeli Oyunlar</title>
     <artist>Oğuz Atay</artist>
     <country>Türkiye</country>
     <company>İletişim</company>
