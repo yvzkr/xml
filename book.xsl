@@ -11,7 +11,7 @@
       <th style="text-align:left">Year</th>
     </tr>
     <xsl:for-each select="catalog/cd[@code='en']">
-     <xsl:sort select="artist"/>
+     <xsl:sort select="artist" order="descending" data-type="number"/>
       <tr>
       	<td><xsl:value-of select="title"/></td>
 	<xsl:choose>     
