@@ -9,6 +9,7 @@
       <th style="text-align:left">Title</th>
       <th style="text-align:left">Artist</th>
       <th style="text-align:left">Year</th>
+      <th style="text-align:left">Price</th>
     </tr>
     <xsl:for-each select="catalog/cd">
      <xsl:sort select="artist" order="descending" data-type="number"/>
@@ -33,6 +34,9 @@
   </table> 
 </body>
 </html>
+</xsl:template>
+<xsl:template match="title">
+ 
 </xsl:template>
 </xsl:stylesheet>
 
