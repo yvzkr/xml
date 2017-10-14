@@ -10,22 +10,27 @@
       <th style="text-align:left">Artist</th>
       <th style="text-align:left">Year</th>
     </tr>
-    <xsl:for-each select="catalog/cd[@code='en']">
+    <xsl:for-each select="catalog/cd">
      <xsl:sort select="artist" order="descending" data-type="number"/>
       <tr>
       	<td><xsl:value-of select="title"/></td>
-	<xsl:choose>     
-	<xsl:when test="price>10"> 	
-		<td bgcolor="#ff00ff"><xsl:value-of select="artist"/></td>
-	</xsl:when>
-	<xsl:otherwise>
+	   <xsl:choose>
+	     <xsl:when test="@code = 'tr' ">	
+		<td>
+
+	<a><xsl:attribute name="href"> <xsl:value-of select="artist"/> </xsl:attribute><xsl:value-of select="artist"/> </a>
+
+		</td>
+	     </xsl:when>
+	     <xsl:otherwise>
 		<td><xsl:value-of select="artist"/></td>
-	</xsl:otherwise>
-	</xsl:choose>
+	     </xsl:otherwise>
+	   </xsl:choose>
 		<td><xsl:value-of select="year"/></td>
+		<td><xsl:value-of select="price"/></td>
       </tr>
     </xsl:for-each>
-  </table>
+  </table> 
 </body>
 </html>
 </xsl:template>
