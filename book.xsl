@@ -14,7 +14,7 @@
     <xsl:for-each select="catalog/cd[price&gt;'10']">
      <xsl:sort select="artist" order="descending" data-type="number"/>
       <tr>
-      	<td><xsl:value-of select="title"/>(<em><xsl:value-of select="last()"/></em>)</td>
+      	<td><xsl:value-of select="title"/>(<em><xsl:value-of select="count(.)"/> </em>)</td>
 	   <xsl:choose>
 	     <xsl:when test="@code = 'tr' ">	
 		<td>

@@ -19,7 +19,7 @@
 			<td><xsl:for-each select="size">
 				<xsl:value-of select="@description"/> :
 				 <xsl:for-each select="color_swatch">
-					<xsl:value-of select="."/> ,
+					<xsl:value-of select="."/> ,(<xsl:value-of select="ceiling(../../price mod 4)"/>)
 				 </xsl:for-each><br/>				
 				
 			</xsl:for-each>
