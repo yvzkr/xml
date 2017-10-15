@@ -28,7 +28,7 @@
 	     </xsl:otherwise>
 	   </xsl:choose>
 		<td><xsl:value-of select="year"/></td>
-		<td><xsl:value-of select="price+price"/></td>
+		<td><xsl:value-of select="price"/></td>
       </tr>
     </xsl:for-each>
   </table>
