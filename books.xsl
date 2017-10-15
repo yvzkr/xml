@@ -7,17 +7,22 @@
  <html>
    <head>
    </head>
-   <body>
-
+   <body style="font-size:15px; font-family:Verdana">
+<style>
+i, a
+{
+	color: purple;
+	font-size: 19px;
+}
+</style>
 <br/>
-	We have <xsl:value-of select="count(catalog/book)"/> books and ..... different authors.<br/>
-	The total coost of books is <xsl:value-of select="format-number(sum(catalog/book/price), '$#,###,###.00')"/>
+	<xsl:apply-templates select="catalog"/>
 	<br/><br/>
-	<xsl:value-of select="count(catalog/book[genre='Computer'])"/> books on Computer genre.<br/>
-	<xsl:value-of select="count(catalog/book[genre='Fantasy'])"/> books on Fantasy genre.<br/>
-	<xsl:value-of select="count(catalog/book[genre='Romance'])"/> books on Romance genre.<br/>
-	<xsl:value-of select="count(catalog/book[genre='Horror'])"/> books on Horror genre.<br/>
-	<xsl:value-of select="count(catalog/book[genre='Science Fiction'])"/> books on Science Fiction genre.<br/><br/><br/>
+	<i><xsl:value-of select="count(catalog/book[genre='Computer'])"/></i> books on Computer genre.<br/>
+	<i><xsl:value-of select="count(catalog/book[genre='Fantasy'])"/></i> books on Fantasy genre.<br/>
+	<i><xsl:value-of select="count(catalog/book[genre='Romance'])"/></i> books on Romance genre.<br/>
+	<i><xsl:value-of select="count(catalog/book[genre='Horror'])"/></i> books on Horror genre.<br/>
+	<i><xsl:value-of select="count(catalog/book[genre='Science Fiction'])"/></i> books on Science Fiction genre.<br/><br/><br/>
 
 
 <xsl:variable name="total" select="count(catalog/book)" />
@@ -26,16 +31,16 @@
 	
 	   
 	    <xsl:if test="position()=$total">
-		The newest book is <xsl:value-of select="title"/> published on <xsl:value-of select="publish_date"/> and the author of this book is <xsl:value-of select="substring-after(author,',')"/>  <xsl:value-of select="substring-before(author,',')"/>.<br/>
+		The newest book is <i><xsl:value-of select="title"/></i> published on <i><xsl:value-of select="publish_date"/></i> and the author of this book is <i><xsl:value-of select="substring-after(author,',')"/>  <xsl:value-of select="substring-before(author,',')"/></i>.<br/>
 	    </xsl:if>
  <xsl:if test="position()=1">	
-The oldest book is <xsl:value-of select="title"/> published on <xsl:value-of select="publish_date"/> and the author of this book is <xsl:value-of select="substring-after(author,',')"/>  <xsl:value-of select="substring-before(author,',')"/>.<br/>
+The oldest book is <i><xsl:value-of select="title"/></i> published on <i><xsl:value-of select="publish_date"/></i> and the author of this book is <i><xsl:value-of select="substring-after(author,',')"/>  <xsl:value-of select="substring-before(author,',')"/></i>.<br/>
 	    </xsl:if>
 	    
 	    
 </xsl:for-each>
 
-<xsl:value-of select="(catalog/book/publish_date)[last()]"/>
+
 
 
 <br/><br/><br/>
@@ -48,15 +53,15 @@ The oldest book is <xsl:value-of select="title"/> published on <xsl:value-of sel
 	</tr>
 	<xsl:for-each select="catalog/book[genre='Computer']">
 	<tr>
-	   <td><xsl:value-of select="title"/></td>
-	   <td><xsl:value-of select="format-number(price,'$##.###')"/></td>
+	   <td><i><xsl:value-of select="title"/></i></td>
+	   <td><i><xsl:value-of select="format-number(price,'$##.###')"/></i></td>
 	</tr>
 
 	</xsl:for-each>
 	</table>
 <br/>
 
-<xsl:apply-templates select="catalog"/>
+
 
 
  
@@ -68,8 +73,12 @@ The oldest book is <xsl:value-of select="title"/> published on <xsl:value-of sel
 
 
 <xsl:template match="catalog">
-<u><em><xsl:value-of select="count(book)"/></em></u>
+We have <i><xsl:value-of select="count(book)"/></i> books and ..... different authors.<br/>
+The total coost of books is: <i><xsl:value-of select="format-number(sum(//price), '$#,###,###.00')"/></i>
+
 </xsl:template>
+
+
 
 </xsl:stylesheet>
 
